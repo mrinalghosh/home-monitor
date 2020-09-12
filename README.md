@@ -1,4 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+This app's purpose is to allow users to monitor their home's temperature and humidity live, from anywhere
 
 ## Available Scripts
 
