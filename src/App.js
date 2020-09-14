@@ -50,7 +50,7 @@ class App extends Component {
         }
 
         < Router >
-          {/* TODO: 404 popup, login authentication, graphing in Feed */}
+          {/* TODO: 404 popup, email login authentication, graphing in Feed */}
           < Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
