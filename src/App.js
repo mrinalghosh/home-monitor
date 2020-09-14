@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Home, Login, Register, Feed, About } from "./components";
+import { Home, Login, Register, Feed, About, AddDevice, NotFound } from "./components";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
@@ -39,7 +39,6 @@ class App extends Component {
               <button onClick={() => firebase.auth().signOut()}>Sign Out</button>
               <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
               <img alt="profile" src={firebase.auth().currentUser.photoURL} width="5%" />
-              {/* TODO: see if mobile profile picture width is okay */}
             </span>)
             : (
               <StyledFirebaseAuth
@@ -56,7 +55,7 @@ class App extends Component {
           <Route exact path="/register" component={Register} />
           <Route exact path="/feed" component={Feed} />
           <Route exact path="/about" component={About} />
-          {/* do we need each component as a SINGLE default export in its own file? */}
+          <Route exact path="/add" component={AddDevice} />
         </Router>
       </div >
     )
