@@ -6,5 +6,10 @@ import About from "./About";
 import FourZeroFour from "./FourZeroFour";
 import AddDevice from "./AddDevice";
 import Graph from "./Graph";
+import Weather from "./Weather";
 
-export { Home, Login, Register, Feed, About, FourZeroFour, AddDevice, Graph};
+export {
+    Home, Login, Register, Feed,
+    About, FourZeroFour, AddDevice,
+    Graph, Weather
+};

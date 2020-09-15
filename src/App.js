@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Home, Login, Register, Feed, About, AddDevice, FourZeroFour, Graph } from "./components";
+import { Home, Login, Register, Feed, About, AddDevice, FourZeroFour, Graph, Weather } from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
@@ -59,6 +59,7 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/add" component={AddDevice} />
             <Route exact path="/graph" component={Graph} />
+            <Route exact path="/weather" component={Weather} />
             <Route component={FourZeroFour} />
           </Switch>
         </Router>
