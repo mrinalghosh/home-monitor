@@ -1,5 +1,4 @@
 import React from 'react';
-// import Plot from 'react-plotly.js' {DO NOT UNCOMMENT - CRASHES - see https://github.com/plotly/react-pivottable/issues/101}
 
 function round(value, decimals) {
     return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);

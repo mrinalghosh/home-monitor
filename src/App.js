@@ -52,7 +52,7 @@ class App extends Component {
         < Router >
           {/* TODO: 404 popup, email login authentication, graphing in Feed */}
           <Switch>
-            < Route exact path="/" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/feed" component={Feed} />
