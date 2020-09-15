@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <div>
             <h3>{click}</h3>
-            <button onClick={() => setClick(click + 1)}>Click me</button>
+            <button onClick={() => setClick(click + 1)}>Click here</button>
         </div>
     )
 }
