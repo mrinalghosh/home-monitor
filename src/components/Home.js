@@ -5,7 +5,9 @@ export default function Home() {
     return (
         <div>
             <h3>{click}</h3>
-            <button onClick={() => setClick(click + 1)}>Click here</button>
+            <button onClick={() => setClick(Math.floor(Math.random() * 100))}>Click here</button>
+            {/* <button onClick={() => setClick(click + 1)}>Click here</button> */}
         </div>
     )
+    
 }
