@@ -38,19 +38,24 @@ export default function Weather() {
     }
 
     return (
-        <div className="weather-app">
+        <div className={
+            (typeof weather.main != "undefined") ?
+                ((weather.main.temp > 75) ? 'weather-app hot' :
+                    ((weather.main.temp > 60) ? 'weather-app warm' :
+                        ((weather.main.temp > 45) ? 'weather-app cool' : 'weather-app cold'))) : 'weather-app'
+        }>
             <main>
                 <div className="search-box">
                     <input type="text" className="search-bar" placeholder="Search..." onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search} />
                 </div>
 
                 <div className="location-box">
-                    <div className="location">{weather ? weather.name : ''}, {weather ? weather.sys.country : ''} </div>
+                    <div className="location">{weather ? weather.name : '............'} , {weather ? weather.sys.country : '...........'} </div>
                     <div className="date">{dateConstruct(new Date())}</div>
                 </div>
                 <div className="weather-box">
-                    <div className="temperature">60°F</div>
-                    <div className="weather">Windy</div>
+                    <div className="temperature">{weather ? weather.main.temp : '~.'}°F</div>
+                    <div className="weather">{weather ? weather.weather[0].main : ''}</div>
                 </div>
             </main >
         </div >
