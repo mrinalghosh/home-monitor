@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function NotFound() {
+export default function FourZeroFour() {
     return (
         <div>
             <h3>Page Not Found</h3>
