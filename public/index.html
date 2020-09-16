@@ -15,10 +15,13 @@
 
   <style type="text/css">
     body {
-      /* opacity: 0.0; */
-      background: #74ebd5;
+      /* background: #74ebd5;
       background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
-      background: linear-gradient(to right, #ACB6E5, #74ebd5);
+      background: linear-gradient(to right, #ACB6E5, #74ebd5); */
+      background: linear-gradient(270deg, #8fdfca, #8fd4df, #df8fd8);
+      background-size: 600% 600%;
+
+      animation: AnimationName 30s ease infinite;
       font-family: 'Roboto', sans-serif;
     }
 
@@ -32,6 +35,20 @@
       font-family: 'Roboto', sans-serif;
       color: rgb(243, 237, 237);
       text-align: center;
+    }
+
+    @keyframes AnimationName {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
     }
 
     /* h2 {} */
@@ -56,12 +73,12 @@
     Chart.defaults.global.defaultFontColor = '#777';
 
     let massPopChart = new Chart(myChart, {
-      type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-      data:{
-        labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
-        datasets:[{
-          label:'Population',
-          data:[
+      type: 'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data: {
+        labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+        datasets: [{
+          label: 'Population',
+          data: [
             617594,
             181045,
             153060,
@@ -70,7 +87,7 @@
             95072
           ],
           //backgroundColor:'green',
-          backgroundColor:[
+          backgroundColor: [
             'rgba(255, 99, 132, 0.6)',
             'rgba(54, 162, 235, 0.6)',
             'rgba(255, 206, 86, 0.6)',
@@ -79,35 +96,35 @@
             'rgba(255, 159, 64, 0.6)',
             'rgba(255, 99, 132, 0.6)'
           ],
-          borderWidth:1,
-          borderColor:'#777',
-          hoverBorderWidth:3,
-          hoverBorderColor:'#000'
+          borderWidth: 1,
+          borderColor: '#777',
+          hoverBorderWidth: 3,
+          hoverBorderColor: '#000'
         }]
       },
-      options:{
-        title:{
-          display:true,
-          text:'Largest Cities In Massachusetts',
-          fontSize:25
+      options: {
+        title: {
+          display: true,
+          text: 'Largest Cities In Massachusetts',
+          fontSize: 25
         },
-        legend:{
-          display:true,
-          position:'right',
-          labels:{
-            fontColor:'#000'
+        legend: {
+          display: true,
+          position: 'right',
+          labels: {
+            fontColor: '#000'
           }
         },
-        layout:{
-          padding:{
-            left:50,
-            right:0,
-            bottom:0,
-            top:0
+        layout: {
+          padding: {
+            left: 50,
+            right: 0,
+            bottom: 0,
+            top: 0
           }
         },
-        tooltips:{
-          enabled:true
+        tooltips: {
+          enabled: true
         }
       }
     });
