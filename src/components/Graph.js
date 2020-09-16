@@ -1,55 +1,46 @@
 import React from 'react';
+import {Line} from 'react-chartjs-2';
 
-function round(value, decimals) {
-    return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
-}
+// function round(value, decimals) {
+//     return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
+// }
 class Graph extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            offset: 0,
-            scalar: 1,
-            graphXValues: [],
-            graphYValues: []
-        }
+    
+constructor(props){
+    super(props);
+    this.state = {
+        chartData:props.chartData
+    }
     }
 
-    componentDidMount() {
-        this.fetchData();
+    static defaultProps = {
+    displayTitle:true,
+    displayLegend: true,
+    legendPosition:'right',
+    location:'City'
     }
 
-    fetchData() {
-        let graphXValueFunction = [];
-        let graphYValueFunction = [];
-        var i;
+    render(){
+    return (
+        <div className="graph">
+    
+        <Line
+            data={this.state.chartData}
+            options={{
+            title:{
+                display:this.props.displayTitle,
+                text:'Largest Cities In '+this.props.location,
+                fontSize:25
+            },
+            legend:{
+                display:this.props.displayLegend,
+                position:this.props.legendPosition
+            }
+            }}
+        />
 
-        var generate = (seed) => round(Math.sin(seed) + Math.random(), 2);
-        // need to make local with weather
-
-        for (i = 0; i < 10; i++) {
-            graphXValueFunction.push(i);
-            graphYValueFunction.push(generate(i));
-        }
-
-        this.setState({
-            graphXValues: graphXValueFunction,
-            graphYValues: graphYValueFunction
-        })
-
-        // console.log(graphXValueFunction);
-        // console.log(graphYValueFunction);
-
-        return 0;
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>Graph Page</h1>
-                <p>x-values: {this.state.graphXValues}</p>
-                <p>y-values: {this.state.graphYValues}</p>
-            </div>
-        )
+        </div>
+    )
     }
 }
 
