@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
-import { Home, Login, Register, Feed, About, AddDevice, FourZeroFour, Graph, Weather } from "./components";
+import {
+  Home,
+  Login,
+  Register,
+  Feed,
+  About,
+  AddDevice,
+  FourZeroFour,
+  Graph,
+  Weather, 
+  NavigationBar
+} from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import firebase from "firebase";
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
-// import { SwipeableDrawer } from '@material-ui/core';
+import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
 firebase.initializeApp({
   apiKey: "AIzaSyDMYhI_pthfVkJjcbFks9yi_-pkB_ywQUw",
@@ -38,7 +48,7 @@ class App extends Component {
             <span>
               <div>Signed In!</div>
               <button onClick={() => firebase.auth().signOut()}>Sign Out</button>
-              <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
+              <h2>Signed in as {firebase.auth().currentUser.displayName}</h2>
               <img alt="profile" src={firebase.auth().currentUser.photoURL} width="5%" />
             </span>)
             : (
@@ -48,6 +58,10 @@ class App extends Component {
               />
             )
         }
+
+        <div>
+          <NavigationBar></NavigationBar>
+        </div>
 
         < Router >
           {/* TODO: 404 popup, email login authentication, graphing in Feed */}

@@ -7,9 +7,10 @@ import FourZeroFour from "./FourZeroFour";
 import AddDevice from "./AddDevice";
 import Graph from "./Graph";
 import Weather from "./Weather";
+import NavigationBar from "./NavigationBar";
 
 export {
     Home, Login, Register, Feed,
     About, FourZeroFour, AddDevice,
-    Graph, Weather
+    Graph, Weather, NavigationBar
 };
