@@ -7,7 +7,6 @@ import {
   About,
   AddDevice,
   FourZeroFour,
-  Graph,
   Weather, 
   NavigationBar
 } from "./components";
@@ -72,7 +71,6 @@ class App extends Component {
             <Route exact path="/feed" component={Feed} />
             <Route exact path="/about" component={About} />
             <Route exact path="/add" component={AddDevice} />
-            <Route exact path="/graph" component={Graph} />
             <Route exact path="/weather" component={Weather} />
             <Route component={FourZeroFour} />
           </Switch>

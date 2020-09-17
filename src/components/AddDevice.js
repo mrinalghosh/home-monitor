@@ -28,7 +28,7 @@ export default function AddDevice() {
                 <input placeholder="9600"></input>
                 <br /><br />
 
-                <input type="submit" value="Submit" />
+                <button type="submit">Send</button>
             </form>
         </div>
     )
