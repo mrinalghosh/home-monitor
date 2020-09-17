@@ -41,7 +41,7 @@ class Graph extends Component {
                 <Line
                     data={this.state.graphData}
                     options={{
-                        maintainAspectRatio: false
+                        maintainAspectRatio: true
                     }}
                     />
             </div>

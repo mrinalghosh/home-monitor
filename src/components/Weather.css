@@ -5,85 +5,51 @@
 }
 
 body {
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .weather-app {
-  background: #2980b9; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #6dd5fa,
-    #2980b9
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #6dd5fa,
-    #2980b9
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background-size: cover;
+  background: linear-gradient(270deg, #636363, #9f9f9f, #d0d0d0, #101010);
+  background-size: 800% 800%;
+  animation: AnimationName 5s ease infinite;
   background-position: bottom;
   transition: 0.4 ease;
 }
 
 .weather-app.cold {
-  background: #536976; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #292e49,
-    #536976
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #292e49,
-    #536976
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(270deg, #494c5d, #6e9faa, #aec7f0, #9d76ea);
+  background-size: 800% 800%;
+  animation: AnimationName 5s ease infinite;
 }
 
 .weather-app.cool {
-  background: #2980b9; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #6dd5fa,
-    #2980b9
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #6dd5fa,
-    #2980b9
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(270deg, #575f8e, #76c7d9, #aef0e5, #76eacc);
+  background-size: 800% 800%;
+  animation: AnimationName 5s ease infinite;
 }
 
 .weather-app.warm {
-  background: #d53369; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #cbad6d,
-    #d53369
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #cbad6d,
-    #d53369
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(270deg, #ff0000, #d97676, #f0d4ae, #eadd76);
+  background-size: 800% 800%;
+  animation: AnimationName 5s ease infinite;
 }
 
 .weather-app.hot {
-  background: #eb3349; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f45c43,
-    #eb3349
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #f45c43,
-    #eb3349
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(270deg, #e33737, #e4a880, #f0e39d, #d0556a);
+  background-size: 800% 800%;
+  animation: AnimationName 5s ease infinite;
 }
 
 main {
