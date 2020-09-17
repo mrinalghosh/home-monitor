@@ -7,22 +7,39 @@ import {Line} from 'react-chartjs-2';
 class Feed extends Component {
     constructor(props){
         super(props);
+
         this.state = {
             tempData:{
                 labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
                 datasets: [{
-                label: 'Temperature("F)',
-                data: [
-                    Math.floor(Math.random() * 40 + 60),
-                    Math.floor(Math.random() * 40 + 60),
-                    Math.floor(Math.random() * 40 + 60),
-                    Math.floor(Math.random() * 40 + 60),
-                    Math.floor(Math.random() * 40 + 60),
-                    Math.floor(Math.random() * 40 + 60)
-                ]
-                ,backgroundColor: 'rgba(255, 99, 132, 0.6)'
-                }
-                ]
+                    label: 'Sensor 1("F)',
+                    data: [
+                        Math.floor(Math.random() * 40 + 60),
+                        Math.floor(Math.random() * 40 + 60),
+                        Math.floor(Math.random() * 40 + 60),
+                        Math.floor(Math.random() * 40 + 60),
+                        Math.floor(Math.random() * 40 + 60),
+                        Math.floor(Math.random() * 40 + 60)
+                    ],
+                    borderWidth: 2,
+                    borderColor: 'red',
+                    fill: false
+                    },
+                    {
+                        label: 'Sensor 2("F)',
+                        data: [
+                            Math.floor(Math.random() * 40 + 60),
+                            Math.floor(Math.random() * 40 + 60),
+                            Math.floor(Math.random() * 40 + 60),
+                            Math.floor(Math.random() * 40 + 60),
+                            Math.floor(Math.random() * 40 + 60),
+                            Math.floor(Math.random() * 40 + 60)
+                        ],
+                        borderWidth: 2,
+                        borderColor: 'green',
+                        fill: false
+                        }                    
+                    ]
             },
             humidityData:{
                 labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
@@ -36,11 +53,13 @@ class Feed extends Component {
                     Math.floor(Math.random() * 100),
                     Math.floor(Math.random() * 100)
                 ]
-                ,backgroundColor: 'rgba(50, 50, 255, 0.6)'
+                ,borderColor: 'blue',
+                fill: false
+
                 }
                 ]
             }
-    }
+        }
 }
 
     render(){
