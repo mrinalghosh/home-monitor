@@ -69,3 +69,23 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+**Unit Testing**
+Tests were designed to verify the functionality of every cmoponent, during, after, and before integration.
+
+*Authorization:*
+The test comprises of a user attempting to sign in/create an account through google for one of the tests, and any email address for another test. Once the user has created and signed into their account, their authorization status will be checked to confirm they remain signed in, and their user ID will be checked to confirm they are signed in to the correct account, and can only access their data.
+
+*Weather:*
+The user should be able to retrieve data about the weather at their home location accurately.
+
+ *Device Management:*
+The test comprises of a signed in user attempting to add a device that is a temperature or humidity sensor, retrieving data from the device once data is available (simulated data to begin), and deleting the device.
+
+*Plotting:*
+To perform this test, the data from each device must be able to be graphed live with minimal latency on the app. The interface must be easy to comprehend and be labeled correctly and display an appropriate range
+
+*Home:*
+The home screen acts as a central hub, where other pages can be accessed from. To test this, the tester must be able to navigate to any of the available pages from the home screen
+

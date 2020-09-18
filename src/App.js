@@ -24,12 +24,12 @@ class App extends Component {
       firebase.initializeApp(firebaseConfig);
     }
     this.state = {
-      developers: []
+      developers: ['test']
     }
   }
 
   writeUserData = () => {
-    firebase.database().ref('/').set(this.state);
+    firebase.database().ref('/all_notes').set({username: 'tortellini', '0001' : 'works'});
     console.log('DATA SAVED');
   }
   
@@ -113,7 +113,7 @@ class App extends Component {
                 <input type="text" ref='role' className="form-control" placeholder="Role" />
               </div>
             </div>
-            <button type="submit" className="btn btn-primary">Save</button>
+            <button onClick={ () => this.writeUserData() } className="btn btn-primary">Save</button>
           </form>
         </div>
       </div>
